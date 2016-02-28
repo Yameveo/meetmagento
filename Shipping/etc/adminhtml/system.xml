@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers">
+            <group id="shippingmeetmagento" translate="label" type="text" sortOrder="99" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Shipping Meet Magento</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+                    <label>Abilitato</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Titolo</label>
+                </field>
+                <field id="name" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Nome del metodo di spedizione</label>
+                </field>
+                <field id="price" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+                       showInStore="0">
+                    <label>Prezzo di invio</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="sallowspecific" translate="label" type="select" sortOrder="50" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Paesi permessi per l'invio</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="51" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Invio a paesi selezionati</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="attribute_set" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Attribute set dei prodotti attivi</label>
+                </field>
+                <field id="free_shipping_amount" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Importo minimo carrello per l'invio gratuito</label>
+                </field>
+                <field id="special_product_amount" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Importo minimo prodotto invio entro 24h</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

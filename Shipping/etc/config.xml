@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <shippingmeetmagento>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Meetmagento\Shipping\Model\Carrier\Shipping</model>
+                <name>Shipping Meet Magento Method</name>
+                <price>4.99</price>
+                <title>Shipping Meet Magento</title>
+                <specificerrmsg>Metodo di spedizione non disponibile.</specificerrmsg>
+                <attribute_set>0,15</attribute_set>
+                <free_shipping_amount>50</free_shipping_amount>
+                <special_product_amount>35</special_product_amount>
+            </shippingmeetmagento>
+        </carriers>
+    </default>
+</config>
